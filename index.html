@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Viewer Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">🎥 StreamApp</div>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Buscar películas por nombre...">
+        </div>
+    </header>
+
+    <main id="movieGrid" class="grid">
+        <div class="loader">Cargando catálogo...</div>
+    </main>
+
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="movieTitle">Título</h2>
+            <div class="video-container">
+                <div class="placeholder-player">
+                    <p>Simulando conexión al servidor...</p>
+                    <code id="streamInfo"></code>
+                    <div class="play-btn">▶️</div>
+                </div>
+            </div>
+            <div class="movie-meta">
+                <span id="movieRating"></span> | <span id="movieExt"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
