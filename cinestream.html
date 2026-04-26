@@ -904,14 +904,9 @@ function openMovie(id) {
 function startPlay() {
   if (!currentMovie) return;
   const url = getStreamUrl(currentMovie);
-  const video = document.getElementById('videoPlayer');
-  const placeholder = document.getElementById('playerPlaceholder');
-  video.src = url;
-  video.style.display = 'block';
-  placeholder.style.display = 'none';
-  video.play().catch(() => {
-    showToast(`<span class="toast-accent">ℹ️ Nota:</span> Si el video no carga directamente, usa la URL en VLC u otro reproductor compatible con streaming.`);
-  });
+  // Open in new tab — Android browser opens with native video player
+  window.open(url, '_blank');
+  showToast(`<span class="toast-accent">▶ Abriendo reproductor…</span> Si no funciona, pulsa "Copiar URL" y ábrela en VLC.`);
 }
 
 function copyUrl() {
