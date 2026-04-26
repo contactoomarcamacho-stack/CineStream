@@ -661,7 +661,9 @@
 
 <script>
 // ── DATA ─────────────────────────────────────────────
-const BASE_URL = 'http://redworld.pro:8880';
+const BASE_URL = 'http://servpremium.net:8880';
+  const IPTV_USER = 'qwKh4dVfuUf8';
+  const IPTV_PASS = 'DfEUmN3msaFZ';
 let allMovies = [];
 let filtered = [];
 let currentPage = 1;
@@ -684,7 +686,7 @@ function starsHTML(r5, cls = '') {
 }
 
 function getStreamUrl(m) {
-  return `${BASE_URL}/movie/user/pass/${m.stream_id}.${m.container_extension}`;
+  return `${BASE_URL}/movie/${IPTV_USER}/${IPTV_PASS}/${m.stream_id}.${m.container_extension}`;
 }
 
 function showToast(msg) {
